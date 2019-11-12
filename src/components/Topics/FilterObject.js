@@ -41,10 +41,10 @@ filterObjects(val) {
     return(
       <div className="puzzleBox filterObjectPB">
         <h4>Filter Object</h4>
-        <span className="puzzleText">{ JSON.stringify(this.state.unFilteredArray, null, 10) }</span>
+        <span className="puzzleText">Original: { JSON.stringify(this.state.unFilteredArray, null, 10) }</span>
         <input className="inputLine" onChange={ (e) => this.updateUserInput(e.target.value) } />
-        <button className="confirmationButton" onClick={ () => this.filterObjects(this.state.userInput)}></button>
-        <span className="resultsBox filterObjectRB">{ JSON.stringify(this.state.filteredArray) }</span>
+        <button className="confirmationButton" onClick={ () => this.filterObjects(this.state.userInput)}>Filter</button>
+        <span className="resultsBox filterObjectRB">Filtered: { JSON.stringify(this.state.filteredArray) }</span>
       </div>
     )
   }
